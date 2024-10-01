@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة بدر للحديد الكريتال</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            background-color: #ffee00;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .navbar {
+            background-color: #0056b3;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 18px; /* تكبير حجم الخط */
+        }
+        .navbar a:hover {
+            background-color: #004494;
+            transform: scale(1.1);
+        }
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .image-gallery .image-item {
+            width: 80%;
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 32px; /* تكبير حجم النص */
+            text-shadow: 1px 1px 2px black;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 1;
+            text-align: center;
+            animation: fadeIn 1s; /* إضافة تأثير انيميشن */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .star {
+            cursor: pointer;
+            font-size: 40px; /* تكبير حجم النجوم */
+            color: #ccc;
+            transition: color 0.3s;
+        }
+        .star.selected {
+            color: gold; /* تغيير لون النجوم عند التقييم */
+        }
+        .article {
+            width: 80%;
+            margin: 20px auto;
+            text-align: justify;
+            font-size: 18px; /* تكبير حجم خط المقالة */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>شركة بدر للحديد الكريتال</h1>
+        <h2>مؤسس الشركة: الأستاذ تامر زينهم</h2>
+    </div>
+
+    <div class="navbar">
+        <a href="#home" onclick="showSection('home')">الصفحة الرئيسية</a>
+        <a href="#about" onclick="showSection('about')">معلومات عنا</a>
+        <a href="#location" onclick="showSection('location')">عنوان شركتنا</a>
+        <a href="#whatsapp" onclick="showSection('whatsapp')">تواصل معنا على واتساب</a>
+        <a href="#contact" onclick="showSection('contact')">اتصل بنا</a>
+        <a href="#inquiry" onclick="showSection('inquiry')">للاستفسار</a>
+        <a href="#feedback" onclick="showSection('feedback')">رأيك يهمنا</a>
+        <a href="#rating" onclick="showSection('rating')">التقييم</a>
+    </div>
+
+    <div class="image-gallery active" id="home">
+        <div class="image-item">
+            <img src="logo.png" alt="صورة 1">
+            <div class="image-text">نتميز بافضل جوده واحسن وارخص سعر</div>
+        </div>
+        <div class="image-item">
+            <img src="download.jpeg" alt="صورة 2">
+            <div class="image-text">نحن نقدم أفضل خدمات الحديد الكريتال.</div>
+        </div>
+        <div class="image-item">
+            <img src="download (1).jpeg" alt="صورة 3">
+            <div class="image-text">منتجاتنا مصنوعة من مواد ذات جودة ممتازة.</div>
+        </div>
+        <div class="image-item">
+            <img src="download (2).jpeg" alt="صورة 4">
+            <div class="image-text">نحن ملتزمون بتقديم أسعار تنافسية.</div>
+        </div>
+        <div class="image-item">
+            <img src="download (3).jpeg" alt="صورة 5">
+            <div class="image-text">فريقنا من الخبراء جاهز لمساعدتك.</div>
+        </div>
+        <div class="image-item">
+            <img src="download (4).jpeg" alt="صورة 6">
+            <div class="image-text">استمتع بجودة الحديد الكريتال.</div>
+        </div>
+    </div>
+
+    <div class="container section" id="about">
+        <h2>معلومات عنا</h2>
+        <p class="article">تأسست شركة بدر للحديد الكريتال على يد الأستاذ تامر زينهم، وهي واحدة من الشركات الرائدة في مجال تصنيع وتوريد الحديد الكريتال. تتمتع الشركة بسمعة ممتازة في السوق بفضل التزامها بالجودة العالية والابتكار. نحن نقدم مجموعة متنوعة من المنتجات التي تلبي احتياجات جميع عملائنا، بدءًا من المشاريع الصغيرة إلى الكبيرة. هدفنا هو تحقيق أعلى مستويات الرضا لدى العملاء من خلال توفير منتجات ذات جودة عالية وخدمات متميزة.</p>
+    </div>
+
+    <div class="container section" id="location">
+        <h2>عنوان شركتنا</h2>
+        <p>الجيزة .. طريق المريوطية . موقف أبو صير</p>
+    </div>
+
+    <div class="container section" id="whatsapp">
+        <h2>تواصل معنا على واتساب</h2>
+        <p>
+            <a href="https://wa.me/201101006444" target="_blank">اضغط هنا للتواصل عبر واتساب</a>
+        </p>
+        <p>رقم التواصل: <strong>+20 01101006444</strong></p> <!-- إضافة رمز دولة مصر -->
+    </div>
+
+    <div class="container section" id="contact">
+        <h2>اتصل بنا</h2>
+        <p>الهاتف: <a href="tel:01021248242">01021248242</a></p>
+    </div>
+
+    <div class="container section" id="inquiry">
+        <h2>للاستفسار</h2>
+        <textarea id="inquiryMessage" rows="4" placeholder="اكتب استفسارك هنا..."></textarea><br>
+        <button onclick="submitInquiry()">إرسال</button>
+        <p id="inquiryResponse" style="display:none;">سوف يتم الرد عليك قريباً.</p>
+    </div>
+
+    <div class="container section" id="feedback">
+        <h2>رأيك يهمنا</h2>
+        <textarea id="feedbackMessage" rows="4" placeholder="اكتب رأيك هنا..."></textarea><br>
+        <button onclick="submitFeedback()">إرسال</button>
+    </div>
+
+    <div class="container section" id="rating">
+        <h2>التقييم من خمس نجوم</h2>
+        <span class="star" onclick="rate(1)">★</span>
+        <span class="star" onclick="rate(2)">★</span>
+        <span class="star" onclick="rate(3)">★</span>
+        <span class="star" onclick="rate(4)">★</span>
+        <span class="star" onclick="rate(5)">★</span>
+        <p id="ratingResponse" style="display:none;">شكراً لتقييمك!</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            if (sectionId === 'home') {
+                document.querySelector('.image-gallery').classList.add('active');
+            } else {
+                document.getElementById(sectionId).classList.add('active');
+                document.querySelector('.image-gallery').classList.remove('active');
+            }
+        }
+
+        function submitInquiry() {
+            document.getElementById("inquiryResponse").style.display = "block";
+            document.getElementById("inquiryMessage").value = ""; // Clear the input
+        }
+
+        function submitFeedback() {
+            alert("شكراً لرأيك!");
+            document.getElementById("feedbackMessage").value = ""; // Clear the input
+        }
+
+        function rate(stars) {
+            const starsElements = document.querySelectorAll('.star');
+            starsElements.forEach((star, index) => {
+                star.classList.toggle('selected', index < stars);
+            });
+            document.getElementById("ratingResponse").style.display = "block"; // Show thank you message
+        }
+    </script>
+
+</body>
+</html>
